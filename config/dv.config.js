@@ -3,12 +3,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-//수정하기
+
 export const pool = mysql.createPool({
-    host: process.env.DB_HOST || 'romit-database.cjiwieckkghb.ap-northeast-2.rds.amazonaws.com',  // mysql의 hostname
+    host: process.env.DB_HOST || '127.0.0.1',  // mysql의 hostname
     user: process.env.DB_USER || 'root',  // user 이름
     port: process.env.DB_PORT || 3306,  // 포트 번호
-    database: process.env.DB_TABLE || 'romit-database',  // 데이터베이스 이름
+    database: process.env.DB_TABLE || 'week10',  // 데이터베이스 이름
     password: process.env.DB_PASSWORD || 'kl8690245',  // 비밀번호
     waitForConnections: true,
 		// Pool에 획득할 수 있는 connection이 없을 때,
